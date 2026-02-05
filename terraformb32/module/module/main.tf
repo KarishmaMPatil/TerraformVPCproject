@@ -15,7 +15,8 @@ module "vpc" {
   vpc_cidr = "172.30.0.0/16"   #vpc variable block unique name
   vpc_subnetA = "172.30.128.0/20"
   public_ip = true
-  az = "us-east-1a"
+  az = "ap-south-1a"
 
 
 }
+
