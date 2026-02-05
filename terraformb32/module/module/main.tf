@@ -1,6 +1,7 @@
 module "ec2" {
   source = "/home/karipatil/TerraformVPCproject/terraformb32/module/main/ec2"
-  webserver_ami = "ami-019715e0d74f695be"      
+  webserver_ami = "ami-019715e0d74f695be"    
+  webserver_instance_type = "t3.micro"
   webserver_keyname = "ubuntu"
   webserver_disable_api_termination = false
   webserver_sg = module.vpc.webserversg   #attache security group to ec2 module name vpc webserversg from output block
@@ -15,5 +16,6 @@ module "vpc" {
   vpc_subnetA = "172.30.128.0/20"
   public_ip = true
   az = "us-east-1a"
+
 
 }
